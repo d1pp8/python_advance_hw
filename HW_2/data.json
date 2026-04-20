@@ -1,0 +1,46 @@
+[
+  {
+    "name": "John Doe",
+    "age": 53,
+    "email": "john.doe@example.com",
+    "is_employed": true,
+    "address": {
+        "city": "New York",
+        "street": "5th Avenue",
+        "house_number": 123
+    }
+  },
+  {
+    "name": "Kevin Valencia",
+    "age": 13,
+    "email": "john.doe@example.com",
+    "is_employed": true,
+    "address": {
+        "city": "New York",
+        "street": "5th Avenue",
+        "house_number": 123
+    }
+  },
+  {
+    "name": "Katherine Andrade",
+    "age": 70,
+    "email": "john.doe@example.com",
+    "is_employed": false,
+    "address": {
+        "city": "New York",
+        "street": "5th Avenue",
+        "house_number": 123
+    }
+  },
+  {
+    "name": "Donna Kelly",
+    "age": 22,
+    "email": "john.doe@example.com",
+    "is_employed": false,
+    "address": {
+        "city": "New York",
+        "street": "5th Avenue",
+        "house_number": 123
+    }
+  }
+]
