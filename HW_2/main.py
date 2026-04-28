@@ -1,5 +1,4 @@
 import json
-import re
 from pydantic import BaseModel, Field, EmailStr, model_validator, field_validator
 
 
@@ -9,19 +8,12 @@ class Address(BaseModel):
     house_number: int = Field(gt=0)
 
 class User(BaseModel):
-    name: str = Field(min_length=2)
+    name: str = Field(min_length=2, pattern=r"^[A-Za-z\s]+$")
     age: int = Field(gt=0, lt=120)
     email: EmailStr
     is_employed: bool = False
     address: Address
 
-
-    @field_validator("name")
-    @classmethod
-    def validate_name(cls, value):
-        if not re.fullmatch(r"[A-Za-z\s]+", value):
-            raise ValueError("Name must contain only letters and spaces")
-        return value
 
     @model_validator(mode='after')
     def check_user_employment(self):
