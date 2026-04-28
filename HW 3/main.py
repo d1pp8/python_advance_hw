@@ -1,13 +1,10 @@
-from pathlib import Path
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy import Column, Integer, String, Numeric, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
 
 # 1
-db_path = Path(__file__).parent / "my_db_hw3.db"
-
-engine = create_engine(f"sqlite:///{db_path}")
+engine = create_engine("sqlite:///:memory:")
 
 Base = declarative_base()
 
