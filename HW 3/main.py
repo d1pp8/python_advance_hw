@@ -3,14 +3,9 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy import Column, Integer, String, Numeric, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
 
-# 1
-engine = create_engine("sqlite:///:memory:")
 
 Base = declarative_base()
 
-# 2
-Session = sessionmaker(bind=engine)
-session = Session()
 
 # 4
 class Category(Base):
@@ -35,5 +30,11 @@ class Product(Base):
     category_id = Column(Integer, ForeignKey("categories.id"))
     category = relationship("Category", back_populates="products")
 
+# 1
+engine = create_engine("sqlite:///:memory:")
+
+# 2
+Session = sessionmaker(bind=engine)
+session = Session()
 
 Base.metadata.create_all(engine)
