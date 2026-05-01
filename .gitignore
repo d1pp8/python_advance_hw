@@ -1,4 +1,6 @@
 .idea/
 __pycache__/
 .venv/
-*.db
+.db
+/Community-Pulse/instance/
+/Community-Pulse/migrations/
