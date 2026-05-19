@@ -1,7 +1,7 @@
-from app.models.response import Response
-from app.models.questions import Question, Statistic
-from app.models.category import Category
+from app.extensions import db
 
-__all__ =['Question', 'Statistic', 'Response', 'Category']
+from .questions import Question, Statistic
+from .response import Response
+from .category import Category
 
-
+__all__ = ["Question", "Statistic", "Response", "Category"]
